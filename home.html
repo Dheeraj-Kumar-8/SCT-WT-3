@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz Master</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <section id="homePage" class="page active">
+
+    <nav>
+      <h2>Quiz Master</h2>
+
+      <div class="nav-buttons">
+        <button id="createTab">Create Quiz</button>
+        <button id="quizTab">Quizzes</button>
+      </div>
+    </nav>
+
+
+    <!-- PLACEHOLDER -->
+    <div class="container" id="placeholderSection">
+      <div class="card placeholder-card">
+        <div class="placeholder-media">
+          <img
+            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1600"
+            alt="Quiz illustration"
+            loading="lazy"
+          >
+        </div>
+        <div class="placeholder-text">
+          <h1>Create Your First Quiz</h1>
+          <p>
+            Click "Create Quiz" to start building questions. You can also
+            browse saved quizzes from the navigation bar.
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- CREATE QUIZ -->
+    <div class="container hidden" id="createSection">
+
+      <div class="card">
+
+        <h1>Create Quiz</h1>
+
+        <div class="input-group">
+          <label>Quiz Title</label>
+          <input type="text" id="quizTitle" placeholder="Enter quiz title">
+        </div>
+
+        <div class="input-group">
+          <label>How many questions?</label>
+          <input type="number" id="questionCount" min="1" placeholder="Enter number">
+        </div>
+
+        <button class="primary-btn" id="generateQuestions">
+          Generate Questions
+        </button>
+
+        <div id="questionsContainer"></div>
+
+      </div>
+    </div>
+
+
+    <!-- QUIZ LIST -->
+    <div class="container hidden" id="quizSection">
+
+      <div class="card">
+
+        <h1>Saved Quizzes</h1>
+
+        <div id="quizList"></div>
+
+      </div>
+
+    </div>
+
+
+  </section>
+
+<script src="script.js"></script>
+</body>
+</html>
